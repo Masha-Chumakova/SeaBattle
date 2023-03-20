@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="odnoPalub.js" defer></script>
+    <script src="dvPubVert.js" defer></script>
+    <script src="trPubVert.js" defer></script>
+    <script src="chPubVert.js" defer></script>
+    <script src="botPoleVert.js" defer></script>
+    <script src="game.js" defer></script>
+    <script src="autoRasrVert.js" defer></script>
+    <script src="gameAuto.js" defer></script>
+
+<title>Морской бой</title>
+</head>
+<header id="header">
+Морской бой
+</header>
+<body id="body">
+<div class="container">
+
+
+
+
+
+
+<div class="pole">
+
+
+
+
+<button class="btnStart" id="startBtn">Начать игру</button>
+
+<button class="btnAuto" id="autoBtn">Автоматическая расстановка кораблей</button>
+<button class="btnHand" id="handBtn">Ручная расстановка кораблей</button>
+
+
+<h1>Игровое поле</h1>
+    <div class="hod">
+        <div class="hodBota" >Ходы бота: <b id="hodBbot"> 0</b> </div>
+        <div class="hodUser" >Ваши ходы: <b id="hodUser"> 0</b></div>
+
+    </div>
+    <div class="hod">
+        <div class="hodBota" >Потоплено: <b id="ochBbot">0</b>/20</div>
+        <div class="hodUser" >Потоплено: <b id="ochUser">0</b>/20</div>
+
+    </div>
+<div class="user-pole">
+
+
+<table id='table1' class="users_pole" border="1" cellspacing="0" >
+<thead >
+<tr class="users_pole" >
+
+<th id="0" ></th>
+<th id="0">1</th>
+<th id="0">2</th>
+<th id="0">3</th>
+<th id="0">4</th>
+<th id="0">5</th>
+<th id="0">6</th>
+<th id="0">7</th>
+<th id="0">8</th>
+<th id="0">9</th>
+<th id="0">10</th>
+</tr>
+</thead>
+
+<tbody >
+<tr class="users_pole">
+<th id="0">A</th>
+<td id="1" data-ship="0"></td>
+<td id="2" data-ship="0"></td>
+<td id="3" data-ship="0"></td>
+<td id="4" data-ship="0"></td>
+<td id="5" data-ship="0"></td>
+<td id="6" data-ship="0"></td>
+<td id="7" data-ship="0"></td>
+<td id="8" data-ship="0"></td>
+<td id="9" data-ship="0"></td>
+<td id="10" data-ship="0"></td>
+</tr>
+
+<tr class="users_pole">
+<th id="0">B</th>
+<td id="11" data-ship="0"></td>
+<td id="12" data-ship="0"></td>
+<td id="13" data-ship="0"></td>
+<td id="14" data-ship="0"></td>
+<td id="15" data-ship="0"></td>
+<td id="16" data-ship="0"></td>
+<td id="17" data-ship="0"></td>
+<td id="18" data-ship="0"></td>
+<td id="19" data-ship="0"></td>
+<td id="20" data-ship="0"></td>
+</tr>
+
+<tr class="users_pole">
+<th id="0">C</th>
+<td id="21" data-ship="0"></td>
+<td id="22" data-ship="0"></td>
+<td id="23" data-ship="0"></td>
+<td id="24" data-ship="0"></td>
+<td id="25" data-ship="0"></td>
+<td id="26" data-ship="0"></td>
+<td id="27" data-ship="0"></td>
+<td id="28" data-ship="0"></td>
+<td id="29" data-ship="0"></td>
+<td id="30" data-ship="0"></td>
+</tr>
+
+<tr class="users_pole">
+<th id="0">D</th>
+<td id="31" data-ship="0"></td>
+<td id="32" data-ship="0"></td>
+<td id="33" data-ship="0"></td>
+<td id="34" data-ship="0"></td>
+<td id="35" data-ship="0"></td>
+<td id="36" data-ship="0"></td>
+<td id="37" data-ship="0"></td>
+<td id="38" data-ship="0"></td>
+<td id="39" data-ship="0"></td>
+<td id="40" data-ship="0"></td>
+</tr>
+
+<tr class="users_pole">
+<th id="0">F</th>
+<td id="41" data-ship="0"></td>
+<td id="42" data-ship="0"></td>
+<td id="43" data-ship="0"></td>
+<td id="44" data-ship="0"></td>
+<td id="45" data-ship="0"></td>
+<td id="46" data-ship="0"></td>
+<td id="47" data-ship="0"></td>
+<td id="48" data-ship="0"></td>
+<td id="49" data-ship="0"></td>
+<td id="50" data-ship="0"></td>
+</tr>
+
+<tr class="users_pole">
+<th id="0">G</th>
+<td id="51" data-ship="0"></td>
+<td id="52" data-ship="0"></td>
+<td id="53" data-ship="0"></td>
+<td id="54" data-ship="0"></td>
+<td id="55" data-ship="0"></td>
+<td id="56" data-ship="0"></td>
+<td id="57" data-ship="0"></td>
+<td id="58" data-ship="0"></td>
+<td id="59" data-ship="0"></td>
+<td id="60" data-ship="0"></td>
+</tr>
+
+<tr class="users_pole">
+<th id="0">H</th>
+<td id="61" data-ship="0"></td>
+<td id="62" data-ship="0"></td>
+<td id="63" data-ship="0"></td>
+<td id="64" data-ship="0"></td>
+<td id="65" data-ship="0"></td>
+<td id="66" data-ship="0"></td>
+<td id="67" data-ship="0"></td>
+<td id="68" data-ship="0"></td>
+<td id="69" data-ship="0"></td>
+<td id="70"></td>
+</tr>
+
+<tr class="users_pole">
+<th id="0">I</th>
+<td id="71" data-ship="0"></td>
+<td id="72" data-ship="0"></td>
+<td id="73" data-ship="0"></td>
+<td id="74" data-ship="0"></td>
+<td id="75" data-ship="0"></td>
+<td id="76" data-ship="0"></td>
+<td id="77" data-ship="0"></td>
+<td id="78" data-ship="0"></td>
+<td id="79" data-ship="0"></td>
+<td id="80" data-ship="0"></td>
+</tr>
+
+<tr class="users_pole">
+<th id="0">J</th>
+<td id="81" data-ship="0"></td>
+<td id="82" data-ship="0"></td>
+<td id="83" data-ship="0"></td>
+<td id="84" data-ship="0"></td>
+<td id="85" data-ship="0"></td>
+<td id="86" data-ship="0"></td>
+<td id="87" data-ship="0"></td>
+<td id="88" data-ship="0"></td>
+<td id="89" data-ship="0"></td>
+<td id="90" data-ship="0"></td>
+</tr>
+
+<tr class="users_pole">
+<th id="0">K</th>
+<td id="91" data-ship="0"></td>
+<td id="92" data-ship="0"></td>
+<td id="93" data-ship="0"></td>
+<td id="94" data-ship="0"></td>
+<td id="95" data-ship="0"></td>
+<td id="96" data-ship="0"></td>
+<td id="97" data-ship="0"></td>
+<td id="98" data-ship="0"></td>
+<td id="99" data-ship="0"></td>
+<td id="100" data-ship="0"></td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="shipRast">
+
+<button class="btnShip" id="1p">Однопалубный</button>
+
+    <button class="btnShip" id="2p">Двухпалубный</button>
+
+<button class="btnShip" id="3p">Трёхпалубный</button>
+
+<button class="btnShip" id="4p">Четырёхпалубный</button>
+
+    <button class="btnReady" id="ready">Готово</button>
+</div>
+<table  id='table2' class="bots_pole" border="1" cellspacing="0" >
+<thead>
+<tr>
+
+<th id="0" ></th>
+<th id="0">1</th>
+<th id="0">2</th>
+<th id="0">3</th>
+<th id="0">4</th>
+<th id="0">5</th>
+<th id="0">6</th>
+<th id="0">7</th>
+<th id="0">8</th>
+<th id="0">9</th>
+<th id="0">10</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<th id="0">A</th>
+<td id="101" data-ship="0"></td>
+<td id="102" data-ship="0"></td>
+<td id="103" data-ship="0"></td>
+<td id="104" data-ship="0"></td>
+<td id="105" data-ship="0"></td>
+<td id="106" data-ship="0"></td>
+<td id="107" data-ship="0"></td>
+<td id="108" data-ship="0"></td>
+<td id="109" data-ship="0"></td>
+<td id="110" data-ship="0"></td>
+</tr>
+
+<tr>
+<th id="0">B</th>
+<td id="111" data-ship="0"></td>
+<td id="112" data-ship="0"></td>
+<td id="113" data-ship="0"></td>
+<td id="114" data-ship="0"></td>
+<td id="115" data-ship="0"></td>
+<td id="116" data-ship="0"></td>
+<td id="117" data-ship="0"></td>
+<td id="118" data-ship="0"></td>
+<td id="119" data-ship="0"></td>
+<td id="120" data-ship="0"></td>
+</tr>
+
+<tr>
+<th id="0">C</th>
+<td id="121" data-ship="0"></td>
+<td id="122" data-ship="0"></td>
+<td id="123" data-ship="0"></td>
+<td id="124" data-ship="0"></td>
+<td id="125" data-ship="0"></td>
+<td id="126" data-ship="0"></td>
+<td id="127" data-ship="0"></td>
+<td id="128" data-ship="0"></td>
+<td id="129" data-ship="0"></td>
+<td id="130" data-ship="0"></td>
+</tr>
+
+<tr>
+<th id="0">D</th>
+<td id="131" data-ship="0"></td>
+<td id="132" data-ship="0"></td>
+<td id="133" data-ship="0"></td>
+<td id="134" data-ship="0"></td>
+<td id="135" data-ship="0"></td>
+<td id="136" data-ship="0"></td>
+<td id="137" data-ship="0"></td>
+<td id="138" data-ship="0"></td>
+<td id="139" data-ship="0"></td>
+<td id="140" data-ship="0"></td>
+</tr>
+
+<tr >
+<th id="0">F</th>
+<td id="141" data-ship="0"></td>
+<td id="142" data-ship="0"></td>
+<td id="143" data-ship="0"></td>
+<td id="144" data-ship="0"></td>
+<td id="145" data-ship="0"></td>
+<td id="146" data-ship="0"></td>
+<td id="147" data-ship="0"></td>
+<td id="148" data-ship="0"></td>
+<td id="149" data-ship="0"></td>
+<td id="150" data-ship="0"></td>
+</tr>
+
+<tr >
+<th id="0">G</th>
+<td id="151" data-ship="0"></td>
+<td id="152" data-ship="0"></td>
+<td id="153" data-ship="0"></td>
+<td id="154" data-ship="0"></td>
+<td id="155" data-ship="0"></td>
+<td id="156" data-ship="0"></td>
+<td id="157" data-ship="0"></td>
+<td id="158" data-ship="0"></td>
+<td id="159" data-ship="0"></td>
+<td id="160" data-ship="0"></td>
+</tr>
+
+<tr >
+<th id="0">H</th>
+<td id="161" data-ship="0"></td>
+<td id="162" data-ship="0"></td>
+<td id="163" data-ship="0"></td>
+<td id="164" data-ship="0"></td>
+<td id="165" data-ship="0"></td>
+<td id="166" data-ship="0"></td>
+<td id="167" data-ship="0"></td>
+<td id="168" data-ship="0"></td>
+<td id="169" data-ship="0"></td>
+<td id="170" data-ship="0"></td>
+</tr>
+
+<tr >
+<th id="0">I</th>
+<td id="171" data-ship="0"></td>
+<td id="172" data-ship="0"></td>
+<td id="173" data-ship="0"></td>
+<td id="174" data-ship="0"></td>
+<td id="175" data-ship="0"></td>
+<td id="176" data-ship="0"></td>
+<td id="177" data-ship="0"></td>
+<td id="178" data-ship="0"></td>
+<td id="179" data-ship="0"></td>
+<td id="180" data-ship="0"></td>
+</tr>
+
+<tr >
+<th id="0">J</th>
+<td id="181" data-ship="0"></td>
+<td id="182" data-ship="0"></td>
+<td id="183" data-ship="0"></td>
+<td id="184" data-ship="0"></td>
+<td id="185" data-ship="0"></td>
+<td id="186" data-ship="0"></td>
+<td id="187" data-ship="0"></td>
+<td id="188" data-ship="0"></td>
+<td id="189" data-ship="0"></td>
+<td id="190" data-ship="0"></td>
+</tr>
+
+<tr>
+<th id="0">K</th>
+<td id="191" data-ship="0"></td>
+<td id="192" data-ship="0"></td>
+<td id="193" data-ship="0"></td>
+<td id="194" data-ship="0"></td>
+<td id="195" data-ship="0"></td>
+<td id="196" data-ship="0"></td>
+<td id="197" data-ship="0"></td>
+<td id="198" data-ship="0"></td>
+<td id="199" data-ship="0"></td>
+<td id="200" data-ship="0"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+    <div class="time">Прошло времени: <b id="tH">0</b>:<b id="tM">0</b>:<b id="tS">00</b> </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
